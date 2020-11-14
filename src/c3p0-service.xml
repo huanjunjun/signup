@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server>
+
+<server>
+
+   <mbean code="com.mchange.v2.c3p0.mbean.C3P0PooledDataSource"
+          name="jboss:service=C3P0PooledDataSource">
+     
+      <attribute name="JndiName">java:PooledDS</attribute>
+      <attribute name="JdbcUrl">jdbc:mysql://localhost/db1?serverTimezone=GMT</attribute>
+      <attribute name="DriverClass">com.mysql.cj.jdbc.Driver</attribute>
+      <attribute name="User">root</attribute>
+      <attribute name="Password">123456</attribute>
+
+     
+
+      <depends>jboss:service=Naming</depends>
+   </mbean>
+
+</server>
+
+   
